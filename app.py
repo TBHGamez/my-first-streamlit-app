@@ -2,7 +2,7 @@
 import streamlit as st
 import sklearn
 import plotly
-st.balloons()
+st.cats()
 
 st.title('GIẢI PHƯƠNG TRÌNH BẬC NHẤT')
 a = st.number_input('Tham số a')
