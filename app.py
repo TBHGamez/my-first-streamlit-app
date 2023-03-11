@@ -1,5 +1,8 @@
 
 import streamlit as st
+
+st.balloons()
+st.snow()
 st.title('GIẢI PHƯƠNG TRÌNH BẬC NHẤT')
 a = st.number_input('Tham số a')
 b = st.number_input('Tham số b')
