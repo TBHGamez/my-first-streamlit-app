@@ -1,5 +1,4 @@
 
-%%writefile app.py
 import streamlit as st
 st.title('GIẢI PHƯƠNG TRÌNH BẬC NHẤT')
 a = st.number_input('Tham số a')
