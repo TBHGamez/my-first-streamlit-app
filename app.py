@@ -1,6 +1,7 @@
 
 import streamlit as st
-
+import sklearn
+import plotly
 st.balloons()
 st.snow()
 st.title('GIẢI PHƯƠNG TRÌNH BẬC NHẤT')
