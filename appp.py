@@ -2,8 +2,9 @@ import pickle
 import streamlit as st
 import sklearn
 
-
 filename = 'model.pickle'
+
+pickle.dump(model, open(filename, "wb"))
 model = pickle.load(open(filename, "rb"))
 st.balloons()
 y_pred = model.predict(x)
