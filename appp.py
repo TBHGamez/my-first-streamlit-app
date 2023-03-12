@@ -1,6 +1,17 @@
 import pickle
-
+import streamlit as st
+import sklearn
 model = pickle.load(open(filename, "rb"))
-X_new = np.array([[2000, 20], [10, 1000]])
+st.balloons()
 
-y_new = model.predict(X_new)
+st.title('GIẢI PHƯƠNG TRÌNH BẬC NHẤT')
+x_new = st.number_input('blabla')
+y_new = model.predict(x_new)
+
+if st.button('Giải'):
+    st.success(f'{y_new}')
+        
+
+
+
+
