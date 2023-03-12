@@ -1,6 +1,9 @@
 import pickle
 import streamlit as st
 import sklearn
+
+
+filename = 'model.pickle'
 model = pickle.load(open(filename, "rb"))
 st.balloons()
 
