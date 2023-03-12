@@ -31,7 +31,19 @@ df.head()
 
 x = df['Temperature'].values
 y = df['Revenue'].values
-x.shape, y.shape
+
+from sklearn.linear_model import LinearRegression
+
+model = LinearRegression()
+model.fit(x, y)
+import pickle
+
+filename = 'model.pickle'
+
+pickle.dump(model, open(filename, "wb"))
+model = pickle.load(open(filename, "rb"))
+
+
 
 """#**TODO: Visualize Data**
 
@@ -93,49 +105,6 @@ Tạo ứng dụng Streamlit (dùng Streamlit Cloud) cho phép người dùng nh
 - Download file model đã lưu ở trên rồi upload lên repository, sau đó load lại model (bằng thư viện pickle) để dùng cho predict
 - requirements.txt
 ```
-pickles
-scikit-learn
-```
-
-
----
 
 
 
-**YOUR REPOSITORY LINK:**
-
-#**Bonus**
-Làm lại bài toán trên mà không dùng thư viện `scikit-learn` (chỉ dùng `numpy`)
-
-**Tính ra bộ trọng số bằng công thức đạo hàm**
-
-Nhắc lại công thức tính bộ trọng số tối ưu của bài toán Linear Regression:
-
-$$\bar{𝐰} = (\bar{𝐗}^T\bar{𝐗})^{-1}\bar{𝐗}^T𝐲$$
-
-**Lưu ý:**
-- Dùng hàm `np.linalg.pinv` để tính ma trận nghịch đảo (chỉ có ma trận vuông mới có ma trận nghịch đảo)
-- Có thể dùng `list` và vòng lặp để tạo ma trận $\bar{𝐗}$ (nếu không dùng được các hàm `numpy`)
-- Để nhân ma trận có thể dùng cú pháp ngắn gọn như sau
-```python
-c = a @ b # thay vì c = np.dot(a,b)
-```
-"""
-
-# YOUR CODE HERE
-
-"""**Tính MAE, MSE** (bằng hàm numpy)"""
-
-# YOUR CODE HERE
-
-"""**Tự viết class LinearRegression** tương tự như class của thư viện `scikit-klearn` (gồm 2 hàm `fit` và `predict`), sau đó gọi tạo đối tượng của class rồi gọi hàm để kiểm tra & so sánh kết quả"""
-
-import numpy as np
-
-# YOUR CODE HERE
-class LinearRegression:
-  def fit(self, x, y):
-    pass
-
-  def predict(self, x):
-    pass
