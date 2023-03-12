@@ -6,13 +6,13 @@ import sklearn
 filename = 'model.pickle'
 model = pickle.load(open(filename, "rb"))
 st.balloons()
-
+ii= mae(y, y_pred)
 st.title('GIẢI PHƯƠNG TRÌNH BẬC NHẤT')
-x_new = st.number_input('blabla')
-y_new = model.predict(x_new)
+#x_new = st.number_input('blabla')
+#y_new = model.predict(x_new)
 
 if st.button('Giải'):
-    st.success(f'{y_new}')
+    st.success(f'{ii}')
         
 
 
