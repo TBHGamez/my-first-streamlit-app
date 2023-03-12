@@ -1,11 +1,11 @@
-import pickles
+import pickle
 import streamlit as st
 import sklearn
 
 filename = 'model.pickle'
 
 
-model = pickles.load(open(filename, "rb"))
+model = pickle.load(open(filename, "rb"))
 st.balloons()
 y_pred = model.predict(x)
 ii= mae(y, y_pred)
